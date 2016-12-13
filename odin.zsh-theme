@@ -62,9 +62,9 @@ function _git_time_since_commit() {
       commit_age="${minutes}m"
     fi
     if [[ -n $(git status -s 2> /dev/null) ]]; then
-        if [ "$HOURS" -gt 4 ]; then
+        if [ "$hours" -gt 4 ]; then
             COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG"
-        elif [ "$MINUTES" -gt 10 ]; then
+        elif [ "$minutes" -gt 10 ]; then
             COLOR="$ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM"
         else
             COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT"
